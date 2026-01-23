@@ -56,7 +56,6 @@ namespace Refactoring101
         }
     }
 
-    // Extracted class for date behavior
     public class Date
     {
         public int Day { get; }
