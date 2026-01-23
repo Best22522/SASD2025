@@ -11,6 +11,7 @@ public class Customer
     public required string Name { get; set; }
     public required string Address { get; set; }
 }
+
 public class CustomerReader
 {
     public Customer ReadCustomer()
@@ -20,9 +21,10 @@ public class CustomerReader
         return new Customer() { Name = name, Address = address };
     }
 }
+
 public class CustomerWriter
 {
-    public void WriterCustomer(Customer customer)
+    public void WriteCustomer(Customer customer)
     {
         Console.WriteLine(customer.Name);
         Console.WriteLine(customer.Address);

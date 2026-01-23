@@ -10,7 +10,7 @@ public class MysteriousName
 {
     // 1.1
     // Bad naming
-    public double Calc(double a, double b) 
+    public double Average(double a, double b) 
     {
         return (a + b) / 2;
     }
@@ -18,16 +18,16 @@ public class MysteriousName
 
 // 1.2
 // Bad Naming
-public class SomeDataStructure
+public class Queue
 {
     // ...
-    public int Read()
+    public int Dequeue()
     {
         //...
         throw new NotImplementedException("Ongoing implementation");
     }
 
-    public void Write(int value)
+    public void Enqueue(int value)
     {
         // ...
     }
