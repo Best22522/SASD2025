@@ -15,8 +15,8 @@ public class Examples
         var d = GetDistance(3, 4);  // 3
         //TestCollection();           // 4
         //TestPerson();               // 5
-        //TestCustomer();             // 6
-        //TestDelegate();             // 7
+        TestCustomer();             // 6
+        TestDelegate();             // 7
         //ExtensionMethod();          // 8
         //Nullable();                 // 9
 
@@ -29,6 +29,7 @@ public class Examples
         var p = new Point(3, 4);
         Console.WriteLine($"{p.X},{p.Y}");
         //p.X = 10; // error: readonly property
+        Console.WriteLine("dkdkdkdkdk".Half());
     }
 
     // 1. var

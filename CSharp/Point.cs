@@ -12,18 +12,15 @@ public class Point
     public double X { get; }
     public double Y { get; }
     public override string ToString() => $"({X}, {Y})";
-
     public Point(double x, double y)
     {
         X = x;
         Y = y;
     }
-
     public static Point operator +(Point left, Point right)
     {
-        return new (left.X + right.X, left.Y + right.Y);
+        return new(left.X + right.X, left.Y + right.Y);
     }
-
     public double GetDistance()
     {
         return Math.Sqrt(X * X + Y * Y);
