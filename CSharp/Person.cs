@@ -5,15 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CSharp;
-/*public class Person
+public class Person
 {
-    private string name = "";
+        /*private string name;
     public string Name
     {
         get { return name; }
         set { name = value; }
+    }*/
+    public string Name
+    {         get;
+        set;
     }
-}*/
+}
 
 public class Person1
 {

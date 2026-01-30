@@ -10,15 +10,25 @@ public class Examples
 {
     public void Run()
     {
-        //VarTest();                  // 1
-        //StringInterpolation();      // 2
-        //var d = GetDistance(3, 4);  // 3
+        VarTest();                  // 1
+        StringInterpolation();      // 2
+        var d = GetDistance(3, 4);  // 3
         //TestCollection();           // 4
         //TestPerson();               // 5
         //TestCustomer();             // 6
         //TestDelegate();             // 7
         //ExtensionMethod();          // 8
         //Nullable();                 // 9
+
+        Exercise();
+    }
+    
+    void Exercise()
+    {
+        Console.WriteLine("Exercise");
+        var p = new Point(3, 4);
+        Console.WriteLine($"{p.X},{p.Y}");
+        //p.X = 10; // error: readonly property
     }
 
     // 1. var
