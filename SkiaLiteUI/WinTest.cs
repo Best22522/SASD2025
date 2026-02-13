@@ -12,9 +12,9 @@ public class WinTest
     public void Run()
     {
         RunComplexLogic();
-        //new GLWindow("Title", 1920, 1080).Run();  // 1. Facade
+        new GLWindow("Title", 1920, 1080).Run();  // 1. Facade
 
-        //new AdapterExample.Example().Run();       // 2. Adapter
+        new AdapterExample.Example().Run();       // 2. Adapter
     }
 
     void RunComplexLogic()

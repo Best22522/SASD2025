@@ -23,13 +23,18 @@ public class RectWidget
         Size = size;
     }
 
-    //public void Act(float deltaTime)
-    //{
-    //}
+    float time = 0;
+    public void Act(float deltaTime)
+    {
+        time += deltaTime;
+        this.Radius = MathF.Max((MathF.Sin(time) + 1) * 64.0f, 0);
+    }
 
-    //public void Draw(SKCanvas canvas)
-    //{
-    //}
+    public void Draw(SKCanvas canvas)
+    {
+        using SKPaint paint = Util.CreatePaint(this.Color);
+        canvas.DrawRoundRect(new SKRoundRect((SKRect)this, this.Radius), paint);
+    }
 
     public static explicit operator SKRect(RectWidget r)
     {

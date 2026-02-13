@@ -14,6 +14,7 @@ public class SkiaTest : IDisposable
     SKSurface surface;
     GRBackendRenderTarget renderTarget;
 
+
     Vector clientSize;
     List<RectWidget> widgets = new();
 
@@ -44,20 +45,16 @@ public class SkiaTest : IDisposable
         grgInterface.Dispose();
     }
 
-    float time = 0;
     public void Render(float deltaTime)
     {
         SKCanvas canvas = surface.Canvas;
         canvas.Clear(SKColors.CornflowerBlue);
 
-        time += deltaTime;
         for (int i = 0; i < widgets.Count; i++)
         {
             var widget = widgets[i];
-            widget.Radius = MathF.Max((MathF.Sin(time) + 1) * 64.0f, 0);
-
-            using SKPaint paint = Util.CreatePaint(widget.Color);
-            canvas.DrawRoundRect(new SKRoundRect((SKRect)widget, widget.Radius), paint);
+            widget.Act(deltaTime);
+            widget.Draw(canvas);
         }
         DrawText(canvas);
 
@@ -76,7 +73,7 @@ public class SkiaTest : IDisposable
         using SKPaint paint2 = Util.CreatePaint(SKColors.Black);
         canvas.DrawShapedText(text, 128, 300, SKTextAlign.Left, font, paint2);
     }
-/*    void AddText()
+   void AddText()
     {
         var typeface = SKTypeface.FromFile(@"Resources\Trirong-Regular.ttf");
         var font = new SKFont(typeface, 40);
@@ -85,5 +82,7 @@ public class SkiaTest : IDisposable
         var text = "รู้กตัญญูกล้ำกลืนนี้นั้นโน้น abc";
         var widget = new TextWidget() { Font = font, Text = text, Position = new(128, 300) };
         widgets.Add(widget);
-    }*/
+
+        widgets.Add(new TextWidget() { Font = font , Text = 'helo world' , Size = new(0, 500) });
+    }
 }
