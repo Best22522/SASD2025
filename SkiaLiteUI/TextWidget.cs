@@ -12,7 +12,7 @@ public class TextWidget : Widget
     public override void Draw(SKCanvas canvas)
     {
         using SKPaint paint = Util.CreatePaint(SKColors.Black);
-        canvas.DrawShapedText(  Text, Position.X, Position.Y, 
-                               SKTextAlign.Left, Font, paint);
+        canvas.DrawShapedText(Text, Position.X, Position.Y,
+                                SKTextAlign.Left, Font, paint);
     }
 }
