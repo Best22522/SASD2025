@@ -6,7 +6,7 @@ using SkiaSharp.HarfBuzz;
 namespace SkiaLiteUI;
 
 // adapted from: https://gist.github.com/tottaka/702c5103b9574bcf773cfd53b669b888
-public class SkiaTest : IDisposable //, Renderer
+public class SkiaTest : IDisposable , Renderer
 {
     // todo: make nullable
     GRGlInterface grgInterface;
@@ -60,7 +60,7 @@ public class SkiaTest : IDisposable //, Renderer
         canvas.Flush();
     }
 
-/*    void DrawText(SKCanvas canvas)
+    void DrawText(SKCanvas canvas)
     {
         var typeface = SKTypeface.FromFile(@"Resources\Trirong-Regular.ttf");
         if (typeface == null) return;
@@ -71,7 +71,7 @@ public class SkiaTest : IDisposable //, Renderer
 
         using SKPaint paint2 = Util.CreatePaint(SKColors.Black);
         canvas.DrawShapedText(text, 128, 300, SKTextAlign.Left, font, paint2);
-    }*/
+    }
     void AddText()
     {
         var typeface = SKTypeface.FromFile(@"Resources\Trirong-Regular.ttf");

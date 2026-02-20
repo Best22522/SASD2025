@@ -10,7 +10,8 @@ namespace SkiaLiteUI;
 public class WinTest
 {
     public void Run()
-    {
-        new GLWindow("Title", 1920, 1080).Run();
+    {   
+        Renderer renderer = new SkiaTest();
+        new GLWindow("Title", 1320, 1080 , renderer).Run();
     }
 }
